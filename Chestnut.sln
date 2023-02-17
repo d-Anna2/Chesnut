@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\Sandbox.vcxproj", "{E813C39B-AD64-49D5-8CB6-C2A2E694B9F6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Chesnut", "Chesnut\Chesnut.vcxproj", "{CBEF9DB0-D3F7-4FED-A905-12EFAD5CF9F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBEF9DB0-D3F7-4FED-A905-12EFAD5CF9F8}.Debug|x64.ActiveCfg = Debug|x64
+		{CBEF9DB0-D3F7-4FED-A905-12EFAD5CF9F8}.Debug|x64.Build.0 = Debug|x64
+		{CBEF9DB0-D3F7-4FED-A905-12EFAD5CF9F8}.Release|x64.ActiveCfg = Release|x64
+		{CBEF9DB0-D3F7-4FED-A905-12EFAD5CF9F8}.Release|x64.Build.0 = Release|x64
+		{E813C39B-AD64-49D5-8CB6-C2A2E694B9F6}.Debug|x64.ActiveCfg = Debug|x64
+		{E813C39B-AD64-49D5-8CB6-C2A2E694B9F6}.Debug|x64.Build.0 = Debug|x64
+		{E813C39B-AD64-49D5-8CB6-C2A2E694B9F6}.Release|x64.ActiveCfg = Release|x64
+		{E813C39B-AD64-49D5-8CB6-C2A2E694B9F6}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+EndGlobal
