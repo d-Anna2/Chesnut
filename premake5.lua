@@ -23,14 +23,14 @@ project "Chestnut"
     }
 
     includedirs {
-        --"$(SolutionDir)Chestnut/vendor/spdlog/include"
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0"
+        systemversion "latest"
 
         defines {
             "CN_PLATFORM_WINDOWS",
@@ -78,7 +78,7 @@ project "Sandbox"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
-        systemversion "10.0"
+        systemversion "latest"
 
         defines {
             "CN_PLATFORM_WINDOWS"        }

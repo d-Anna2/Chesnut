@@ -1,6 +1,7 @@
 ﻿#include "Application.h"
 
-#include <cstdio>
+#include "Chestnut/Log.h"
+#include "Chestnut/Events/ApplicationEvent.h"
 
 namespace chestnut {
     Application::Application() {
@@ -10,7 +11,8 @@ namespace chestnut {
     }
 
     void Application::Run() {
-        printf("starting run function...");
+        WindowResizeEvent e(1200, 123);
+        CN_TRACE(e);
         while (true);
     }
 

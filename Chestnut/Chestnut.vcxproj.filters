@@ -4,6 +4,9 @@
     <Filter Include="Chestnut">
       <UniqueIdentifier>{3338928A-1F05-ED95-481E-DB3D344A2224}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Chestnut\Events">
+      <UniqueIdentifier>{B74C76F5-23D8-E3B9-2CE9-66AE98F33FBA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Chestnut.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Chestnut\EntryPoint.h">
       <Filter>Chestnut</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chestnut\Events\ApplicationEvent.h">
+      <Filter>Chestnut\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chestnut\Events\Event.h">
+      <Filter>Chestnut\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chestnut\Events\KeyEvent.h">
+      <Filter>Chestnut\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chestnut\Events\MouseEvent.h">
+      <Filter>Chestnut\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Chestnut\Log.h">
       <Filter>Chestnut</Filter>
