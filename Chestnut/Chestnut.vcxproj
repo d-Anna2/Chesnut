@@ -65,6 +65,7 @@
       <PreprocessorDefinitions>CN_PLATFORM_WINDOWS;CN_BUILD_DLL;_DEBUG;CPPDYNAMICLIBRARYTEMPLATE_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)Chestnut\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -95,9 +96,11 @@
     <ClInclude Include="src\Chestnut\Application.h" />
     <ClInclude Include="src\Chestnut\Core.h" />
     <ClInclude Include="src\Chestnut\EntryPoint.h" />
+    <ClInclude Include="src\Chestnut\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Chestnut\Application.cpp" />
+    <ClCompile Include="src\Chestnut\Log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

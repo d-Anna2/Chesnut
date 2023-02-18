@@ -1,0 +1,3 @@
+[submodule "Chestnut/vendor/spdlog"]
+	path = Chestnut/vendor/spdlog
+	url = https://github.com/gabime/spdlog
