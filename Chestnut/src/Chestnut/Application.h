@@ -1,7 +1,6 @@
 ﻿#pragma once
 
 #include "Core.h"
-#include "Chestnut/Events/Event.h"
 
 namespace chestnut
 {

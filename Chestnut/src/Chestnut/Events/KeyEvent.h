@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace chestnut {
     class CHESTNUT_API KeyEvent: public Event {
     public:

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
 
 namespace chestnut {
     class CHESTNUT_API MouseMovedEvent: public Event {
@@ -32,7 +31,7 @@ namespace chestnut {
 
         std::string ToString() const override {
             std::stringstream ss;
-            ss << "MouseScrolledEvent: " << GetXOffset() << ", " GetYOffset();
+            ss << "MouseScrolledEvent: " << GetXOffset() << ", " << GetYOffset();
             return ss.str();
         }
 

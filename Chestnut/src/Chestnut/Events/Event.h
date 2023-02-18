@@ -1,8 +1,6 @@
 #pragma once
 
 #include "Chestnut/Core.h"
-#include <string>
-#include <functional>
 
 namespace chestnut {
     // currently blocking events are used
