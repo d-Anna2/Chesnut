@@ -9,6 +9,12 @@ workspace "Chestnut"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- inlcude dirs relatie to root folder (solution dir)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Chestnut/vendor/GLFW/include"
+
+include "Chestnut/vendor/GLFW"
+
 project "Chestnut"
     location "Chestnut"
     kind "SharedLib"
@@ -27,7 +33,13 @@ project "Chestnut"
 
     includedirs {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
