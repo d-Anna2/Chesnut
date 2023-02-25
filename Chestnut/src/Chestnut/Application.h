@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Window.h"
+#include "Events/ApplicationEvent.h"
 
 namespace chestnut
 {
@@ -9,11 +10,13 @@ namespace chestnut
     {
     public:
         Application();
-        virtual ~Application();
+        virtual ~Application() = default;
         void Run();
+        void OnEvent(Event& e);
     private:
         std::unique_ptr<Window> m_window;
-        bool m_running = true;
+        bool m_running;
+        bool OnWindowClose(WindowCloseEvent& e);
     };
 
     // to be defined in client

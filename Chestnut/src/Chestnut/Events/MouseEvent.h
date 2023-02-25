@@ -48,12 +48,12 @@ namespace chestnut {
         EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
     protected:
-        MouseButtonEvent(button): m_button(button) {}
+        MouseButtonEvent(int button): m_button(button) {}
         
         int m_button;
     };
 
-    class CHESTNUT_API MouseButtonPressecEvent: public MouseButtonEvent {
+    class CHESTNUT_API MouseButtonPressedEvent: public MouseButtonEvent {
     public:
         MouseButtonPressedEvent(int button): MouseButtonEvent(button) {}
         std::string ToString() const override {
