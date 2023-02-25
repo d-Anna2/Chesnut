@@ -29,5 +29,24 @@ git is a version control tool (software), github is an online hosting service to
 - teams involve many people (not all with experience in version control)
 - binary assets, large projects
 - merge conflicts 
-  
+## Exercise 2 – Game Engine
+### Implement a Logging System
+- [x] implement a logging system or use an existing library with an abstraction layer in between (facade pattern, adapter pattern, ...)
+- [x] provide a build system for your project
+- [x] push your results on github
+## Questions
+### 1. Describe a logging system with your own words:
+A logging system provides possibilities to log all kind of information. It is usefull for troubleshooting, monitoring, and security purposes, and provides a detailed record of what happened and when.
+### 2. What is the difference between git submodules and git subtrees?
+submodules are al link to a single commit in a subproject, subtrees store the whole subproject including history
+### 3. What is a build system in C++? Name 3 build systems:
+- premake 
+- make, cmake
+- ninja
+### 4. What is a package manager in C++? Name 3 package manager:
+a package manager automates the process of installing, upgrading, configurate and remove packages
+- conan
+- bucharoo
+- hunter
+- vcpkg
 
