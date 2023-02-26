@@ -20,6 +20,7 @@ project "Chestnut"
     kind "SharedLib"
     language "C++"
 
+
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -45,6 +46,8 @@ project "Chestnut"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
+        runtime "Debug"
+        buildoptions "/MDd"
         systemversion "latest"
 
         defines {
@@ -93,6 +96,8 @@ project "Sandbox"
     filter "system:windows"
         cppdialect "C++17"
         staticruntime "On"
+        runtime "Debug"
+        buildoptions "/MDd"
         systemversion "latest"
 
         defines {
