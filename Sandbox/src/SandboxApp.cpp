@@ -15,6 +15,7 @@ class Sandbox: public chestnut::Application {
 public:
     Sandbox() {
         PushLayer(new ExampleLayer());
+        PushOverlay(new chestnut::ImGuiLayer());
     }
 };
 

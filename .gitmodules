@@ -4,3 +4,6 @@
 [submodule "Chestnut/vendor/GLFW"]
 	path = Chestnut/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Chestnut/vendor/imgui"]
+	path = Chestnut/vendor/imgui
+	url = https://github.com/TheCherno/imgui/tree/master

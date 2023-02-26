@@ -7,8 +7,14 @@
     <Filter Include="Chestnut\Events">
       <UniqueIdentifier>{B74C76F5-23D8-E3B9-2CE9-66AE98F33FBA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Chestnut\ImGui">
+      <UniqueIdentifier>{9DC73E36-8995-323C-7229-A3625E960EA1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\Chestnut\Events\MouseEvent.h">
       <Filter>Chestnut\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Chestnut\ImGui\ImGuiLayer.h">
+      <Filter>Chestnut\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Chestnut\Layer.h">
       <Filter>Chestnut</Filter>
     </ClInclude>
@@ -49,6 +58,9 @@
     <ClInclude Include="src\Chestnut\Window.h">
       <Filter>Chestnut</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\Chestnut\Application.cpp">
       <Filter>Chestnut</Filter>
     </ClCompile>
+    <ClCompile Include="src\Chestnut\ImGui\ImGuiLayer.cpp">
+      <Filter>Chestnut\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Chestnut\Layer.cpp">
       <Filter>Chestnut</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\Chestnut\Log.cpp">
       <Filter>Chestnut</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
