@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- inlcude dirs relatie to root folder (solution dir)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Chestnut/vendor/GLFW/include"
+IncludeDir["glad"] = "Chestnut/vendor/glad/include"
 
 include "Chestnut/vendor/GLFW"
+include "Chestnut/vendor/glad"
 
 project "Chestnut"
     location "Chestnut"
@@ -35,11 +37,13 @@ project "Chestnut"
     includedirs {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.glad}"
     }
 
     links {
         "GLFW",
+        "glad",
         "opengl32.lib"
     }
 
@@ -51,7 +55,8 @@ project "Chestnut"
 
         defines {
             "CN_PLATFORM_WINDOWS",
-            "CN_BUILD_DLL"
+            "CN_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands {

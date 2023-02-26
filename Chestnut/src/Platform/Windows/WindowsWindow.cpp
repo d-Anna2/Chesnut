@@ -6,6 +6,7 @@
 #include "Chestnut/Events/ApplicationEvent.h"
 #include "Chestnut/Events/KeyEvent.h"
 #include "Chestnut/Events/MouseEvent.h"
+#include <glad/glad.h>
 
 namespace chestnut {
     static bool s_GLFWInitialized = false;
@@ -43,6 +44,8 @@ namespace chestnut {
 
         m_window = glfwCreateWindow((int) props.Width, (int) props.Height, m_data.Title.c_str(), nullptr, nullptr);
         glfwMakeContextCurrent(m_window);
+        int status = gladLoadGLLoader((GLADloadproc) glfwGetProcAddress);
+        CN_ASSERT(status, "failed to initialize 'glad'");
         glfwSetWindowUserPointer(m_window, &m_data);
         SetVSync(true);
 

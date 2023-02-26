@@ -4,6 +4,8 @@
 #include "Chestnut/Log.h"
 #include <GLFW/glfw3.h>
 
+#include "glad/glad.h"
+
 namespace chestnut {
     #define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
     
