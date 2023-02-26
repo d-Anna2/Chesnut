@@ -15,12 +15,19 @@ namespace chestnut {
 
     Application::~Application() { }
 
+    void Application::PushLayer(Layer* layer) {
+        m_layerStack.PushLayer(layer);
+    }
 
+    void Application::PushOverlay(Layer* overlay) {
+        m_layerStack.PushOverlay(overlay);
+    }
+    
     void Application::Run() {
-        
         while (m_running) {
             glClearColor(0, 1, 1, 1);
             glClear(GL_COLOR_BUFFER_BIT);
+            for (Layer* layer: m_layerStack) layer->OnUpdate();
             m_window->OnUpdate();
         }
     }
@@ -29,6 +36,11 @@ namespace chestnut {
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
         CN_CORE_TRACE("{0}", e);
+
+        for (auto it = m_layerStack.end(); it != m_layerStack.begin();(*--it)->OnEvent(e)) {
+            if (e.m_handled)
+                break;
+        }
     }
 
     bool Application::OnWindowClose(WindowCloseEvent& e) {

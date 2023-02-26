@@ -1,8 +1,21 @@
 ﻿#include <Chestnut.h>
 
+class ExampleLayer: public chestnut::Layer {
+public:
+    ExampleLayer(): Layer("Example") {}
+    void OnUpdate() override {
+        CN_INFO("ExampleLayer OnUpdate");
+    }
+    void OnEvent(chestnut::Event& event) override {
+        CN_TRACE("{0}", event);
+    }
+};
+
 class Sandbox: public chestnut::Application {
 public:
-    Sandbox() = default;
+    Sandbox() {
+        PushLayer(new ExampleLayer());
+    }
 };
 
 chestnut::Application* chestnut::createApplication() {

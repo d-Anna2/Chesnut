@@ -38,7 +38,6 @@ namespace chestnut {
         inline bool IsInCategory(EventCategory category) {
             return GetCategoryFlags() & category;
         }
-    protected:
         bool m_handled = false;
     };
 

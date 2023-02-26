@@ -37,6 +37,12 @@
     <ClInclude Include="src\Chestnut\Events\MouseEvent.h">
       <Filter>Chestnut\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Chestnut\Layer.h">
+      <Filter>Chestnut</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chestnut\LayerStack.h">
+      <Filter>Chestnut</Filter>
+    </ClInclude>
     <ClInclude Include="src\Chestnut\Log.h">
       <Filter>Chestnut</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Chestnut\Application.cpp">
+      <Filter>Chestnut</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chestnut\Layer.cpp">
+      <Filter>Chestnut</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Chestnut\LayerStack.cpp">
       <Filter>Chestnut</Filter>
     </ClCompile>
     <ClCompile Include="src\Chestnut\Log.cpp">

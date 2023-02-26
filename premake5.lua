@@ -47,7 +47,6 @@ project "Chestnut"
         cppdialect "C++17"
         staticruntime "On"
         runtime "Debug"
-        buildoptions "/MDd"
         systemversion "latest"
 
         defines {
@@ -62,14 +61,17 @@ project "Chestnut"
     filter "configurations:Debug"
         defines "CN_DEBUG"
         symbols "On"
+        buildoptions "/MDd"
 
     filter "configurations:Release"
         defines "CN_RELEASE"
         optimize "On"
+        buildoptions "/MD"
 
     filter "configurations:Dist"
         defines "CN_DIST"
         optimize "On"
+        buildoptions "/MD"
 
 project "Sandbox"
     location "Sandbox"
@@ -97,7 +99,6 @@ project "Sandbox"
         cppdialect "C++17"
         staticruntime "On"
         runtime "Debug"
-        buildoptions "/MDd"
         systemversion "latest"
 
         defines {
@@ -111,13 +112,16 @@ project "Sandbox"
     filter "configurations:Debug"
         defines "CN_DEBUG"
         symbols "On"
+        buildoptions "/MDd"
 
     filter "configurations:Release"
         defines "CN_RELEASE"
         optimize "On"
+        buildoptions "/MD"
 
     filter "configurations:Dist"
         defines "CN_DIST"
         optimize "On"
+        buildoptions "/MD"
    
 
