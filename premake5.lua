@@ -1,6 +1,6 @@
 workspace "Chestnut"
     architecture "x64"
-
+    startproject "Sandbox"
     configurations {
         "Debug",
         "Release",
@@ -19,10 +19,12 @@ include "Chestnut/vendor/GLFW"
 include "Chestnut/vendor/glad"
 include "Chestnut/vendor/imgui"
 
+
 project "Chestnut"
     location "Chestnut"
     kind "SharedLib"
     language "C++"
+    staticruntime "off"
 
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -53,7 +55,6 @@ project "Chestnut"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         runtime "Debug"
         systemversion "latest"
 
@@ -70,22 +71,26 @@ project "Chestnut"
     filter "configurations:Debug"
         defines "CN_DEBUG"
         symbols "On"
-        buildoptions "/MDd"
+        runtime "Debug"
+        --buildoptions "/MDd"
 
     filter "configurations:Release"
         defines "CN_RELEASE"
         optimize "On"
-        buildoptions "/MD"
+        runtime "Release"
+        --buildoptions "/MD"
 
     filter "configurations:Dist"
         defines "CN_DIST"
         optimize "On"
-        buildoptions "/MD"
+        runtime "Release"
+        --buildoptions "/MD"
 
 project "Sandbox"
     location "Sandbox"
     kind "ConsoleApp"
     language "C++"
+    staticruntime "off"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -106,7 +111,6 @@ project "Sandbox"
 
     filter "system:windows"
         cppdialect "C++17"
-        staticruntime "On"
         runtime "Debug"
         systemversion "latest"
 
@@ -121,16 +125,19 @@ project "Sandbox"
     filter "configurations:Debug"
         defines "CN_DEBUG"
         symbols "On"
-        buildoptions "/MDd"
+        runtime "Debug"
+        --buildoptions "/MDd"
 
     filter "configurations:Release"
         defines "CN_RELEASE"
         optimize "On"
-        buildoptions "/MD"
+        runtime "Release"
+        --buildoptions "/MD"
 
     filter "configurations:Dist"
         defines "CN_DIST"
         optimize "On"
-        buildoptions "/MD"
+        runtime "Release"
+        --buildoptions "/MD"
    
 
