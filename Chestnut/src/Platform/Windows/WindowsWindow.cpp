@@ -82,6 +82,11 @@ namespace chestnut {
                 }
             }
         });
+        glfwSetCharCallback(m_window, [](GLFWwindow* window, unsigned int character) {
+            WindowData& data = *(WindowData*) glfwGetWindowUserPointer(window);
+            KeyTypedEvent event(character);
+            data.eventCallback(event);
+        }); 
         glfwSetMouseButtonCallback(m_window, [](GLFWwindow* window, int button, int action, int mods) {
             WindowData& data = *(WindowData*) glfwGetWindowUserPointer(window);
             switch (action) {
@@ -102,9 +107,9 @@ namespace chestnut {
             MouseScrolledEvent event((float) xoffset, (float) yoffset);
             data.eventCallback(event);
         });
-        glfwSetCursorPosCallback(m_window, [] (GLFWwindow* window, double xpos, double ypos) {
+        glfwSetCursorPosCallback(m_window, [] (GLFWwindow* window, double xPos, double yPos) {
             WindowData& data = *(WindowData*) glfwGetWindowUserPointer(window);
-            MouseMovedEvent event((float) xpos, (float) ypos);
+            MouseMovedEvent event((float) xPos, (float) yPos);
             data.eventCallback(event);
         });
     }

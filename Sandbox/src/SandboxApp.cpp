@@ -4,7 +4,7 @@ class ExampleLayer: public chestnut::Layer {
 public:
     ExampleLayer(): Layer("Example") {}
     void OnUpdate() override {
-        CN_INFO("ExampleLayer OnUpdate");
+        // CN_INFO("ExampleLayer OnUpdate");
     }
     void OnEvent(chestnut::Event& event) override {
         CN_TRACE("{0}", event);

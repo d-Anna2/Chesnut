@@ -14,7 +14,6 @@ namespace chestnut {
     Application::Application() {
         CN_CORE_ASSERT(!s_instance, "Application already exists");
         s_instance = this;
-        m_running = true;
         m_window = std::unique_ptr<Window>(Window::Create());
         m_window->SetEventCallback(BIND_EVENT_FN(Application::OnEvent));
     }
@@ -32,7 +31,7 @@ namespace chestnut {
     }
     
     void Application::Run() {
-        while (m_running) {
+        while (m_Running) {
             glClearColor(0, 1, 1, 1);
             glClear(GL_COLOR_BUFFER_BIT);
             for (Layer* layer: m_layerStack) layer->OnUpdate();
@@ -43,7 +42,7 @@ namespace chestnut {
     void Application::OnEvent(Event& e) {
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
-        CN_CORE_TRACE("{0}", e);
+        // CN_CORE_TRACE("{0}", e);
 
         for (auto it = m_layerStack.end(); it != m_layerStack.begin();(*--it)->OnEvent(e)) {
             if (e.m_handled)
@@ -52,7 +51,7 @@ namespace chestnut {
     }
 
     bool Application::OnWindowClose(WindowCloseEvent& e) {
-        m_running = false;
+        m_Running = false;
         return true;
     }
 

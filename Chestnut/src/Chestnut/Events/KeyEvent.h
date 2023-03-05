@@ -21,13 +21,26 @@ namespace chestnut {
 
         std::string ToString() const override {
             std::stringstream ss;
-            ss << "KeyPressedEvent: " << m_keyCode << " (" << m_repeatCount << " repeats";
+            ss << "KeyPressedEvent: " << m_keyCode << " (" << m_repeatCount << " repeats)";
             return ss.str();
         }
 
         EVENT_CLASS_TYPE(KeyPressed)
     private:
         int m_repeatCount;
+    };
+
+    class CHESTNUT_API KeyTypedEvent: public KeyEvent {
+    public:
+        KeyTypedEvent(int keycode): KeyEvent(keycode) {}
+
+        std::string ToString() const override {
+            std::stringstream ss;
+            ss << "KeyTypedEvent: " << m_keyCode;
+            return ss.str();
+        }
+
+        EVENT_CLASS_TYPE(KeyTyped)
     };
 
     class CHESTNUT_API KeyReleasedEvent: public KeyEvent {

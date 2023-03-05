@@ -18,14 +18,16 @@ namespace chestnut
         void PushLayer(Layer* layer);
         void PushOverlay(Layer* overlay);
 
-        inline static Application& Get() {
+        static Application& Get() {
             return *s_instance;
         }
 
-        inline Window& GetWindow() { return *m_window; }
+        Window& GetWindow() { return *m_window; }
+
     private:
+        bool m_Running;
+
         std::unique_ptr<Window> m_window;
-        bool m_running;
         bool OnWindowClose(WindowCloseEvent& e);
 
         LayerStack m_layerStack;
