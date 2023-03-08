@@ -59,7 +59,7 @@ functionally similar, static linked libraries copy the code directly into the ap
 #### 2. Describe a logging system with your own words:
 A logging system provides possibilities to log all kind of information. It is usefull for troubleshooting, monitoring, and security purposes, and provides a detailed record of what happened and when.
 #### 3. What is a Design Pattern?
-solution to a commonly occurring problem
+solution to a commonly occurring problem, abstract, no specific implementation
 #### 4. Name and describe 2 Design Patterns (except façade or adapter):
 - Factory pattern:
 Interface + implementations -> Factory "produces" objects which implement the interface
