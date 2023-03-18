@@ -15,9 +15,11 @@ namespace chestnut {
         inline unsigned int GetHeight() const override { return m_data.height; }
         
         // window attributes
-        inline void SetEventCallback(const EventCallbackFn& callback) override { m_data.eventCallback = callback; }
+        void SetEventCallback(const EventCallbackFn& callback) override { m_data.eventCallback = callback; }
         void SetVSync(bool enabled) override;
         bool IsVSync() const override;
+
+        void* GetNativeWindow() const override { return m_window; }
     private:
         virtual void Init(const WindowProps& props);
         virtual void Shutdown();

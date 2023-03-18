@@ -4,6 +4,7 @@
 #include "Chestnut/Log.h"
 #include <GLFW/glfw3.h>
 
+#include "Input.h"
 #include "glad/glad.h"
 
 namespace chestnut {
@@ -35,6 +36,9 @@ namespace chestnut {
             glClearColor(0, 1, 1, 1);
             glClear(GL_COLOR_BUFFER_BIT);
             for (Layer* layer: m_layerStack) layer->OnUpdate();
+            auto [x, y] = Input::getMousePosition();
+            CN_TRACE("---{0}, {1}---", x, y);
+            
             m_window->OnUpdate();
         }
     }
