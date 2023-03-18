@@ -57,7 +57,7 @@ project "Chestnut"
         cppdialect "C++17"
         runtime "Debug"
         systemversion "latest"
-
+        
         defines {
             "CN_PLATFORM_WINDOWS",
             "CN_BUILD_DLL",

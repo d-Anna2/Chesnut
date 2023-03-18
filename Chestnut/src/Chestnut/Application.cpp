@@ -43,7 +43,6 @@ namespace chestnut {
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
         // CN_CORE_TRACE("{0}", e);
-
         for (auto it = m_layerStack.end(); it != m_layerStack.begin();(*--it)->OnEvent(e)) {
             if (e.m_handled)
                 break;

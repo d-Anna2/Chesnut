@@ -17,7 +17,7 @@ namespace chestnut {
                 :Title(title), Width(width), Height(height) {}
     };
 
-    // interface representing a desktop system based window
+    // interface (pure abstract classed used) representing a desktop system based window
     class CHESTNUT_API Window {
     public:
         using EventCallbackFn = std::function<void(Event&)>;

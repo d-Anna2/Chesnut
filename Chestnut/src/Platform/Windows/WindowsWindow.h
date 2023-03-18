@@ -7,7 +7,7 @@ namespace chestnut {
     class WindowsWindow: public Window{
     public:
         WindowsWindow(const WindowProps& props);
-        virtual ~WindowsWindow();
+        virtual ~WindowsWindow() override;
 
         void OnUpdate() override;
 
