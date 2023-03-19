@@ -162,9 +162,11 @@
     <ClInclude Include="src\Chestnut\Events\MouseEvent.h" />
     <ClInclude Include="src\Chestnut\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Chestnut\Input.h" />
+    <ClInclude Include="src\Chestnut\KeyCodes.h" />
     <ClInclude Include="src\Chestnut\Layer.h" />
     <ClInclude Include="src\Chestnut\LayerStack.h" />
     <ClInclude Include="src\Chestnut\Log.h" />
+    <ClInclude Include="src\Chestnut\MouseButtonCodes.h" />
     <ClInclude Include="src\Chestnut\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />

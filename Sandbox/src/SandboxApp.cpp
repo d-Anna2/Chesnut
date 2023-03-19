@@ -4,10 +4,15 @@ class ExampleLayer: public chestnut::Layer {
 public:
     ExampleLayer(): Layer("Example") {}
     void OnUpdate() override {
-        // CN_INFO("ExampleLayer OnUpdate");
+        if (chestnut::Input::isKeyPressed(CN_KEY_TAB)) {
+            CN_INFO("Tab Key pressed");
+        }
     }
     void OnEvent(chestnut::Event& event) override {
-        CN_TRACE("{0}", event);
+        if (event.GetEventType() == chestnut::EventType::KeyPressed) {
+            chestnut::KeyPressedEvent &e = (chestnut::KeyPressedEvent&) event;
+            CN_TRACE("{0}", (char) e.GetKeyCode());
+        }
     }
 };
 
